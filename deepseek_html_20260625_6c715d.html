@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Ayushi! 🎀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ── RESET & BASE ── */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #fce4ec 0%, #f8bbd0 20%, #f48fb1 45%, #ce93d8 70%, #b39ddb 100%);
+            background-size: 300% 300%;
+            animation: gradientBG 14s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ── FLOATING ELEMENTS ── */
+        .float-item {
+            position: absolute;
+            font-size: 2.2rem;
+            opacity: 0.7;
+            animation: floatUp linear infinite;
+            z-index: 1;
+            pointer-events: none;
+            filter: drop-shadow(0 0 12px rgba(255, 105, 180, 0.5));
+            user-select: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(110vh) scale(0.4) rotate(0deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.3) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* ── CONFETTI ── */
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 16px;
+            border-radius: 2px;
+            top: -20px;
+            animation: confettiFall linear infinite;
+            z-index: 0;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(720deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* ── GLASSMORPH CONTAINER ── */
+        .container {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(18px) saturate(1.3);
+            -webkit-backdrop-filter: blur(18px) saturate(1.3);
+            padding: 38px 28px;
+            border-radius: 48px 24px 48px 24px;
+            box-shadow:
+                0 20px 60px rgba(255, 105, 180, 0.25),
+                inset 0 0 40px rgba(255, 255, 255, 0.5),
+                0 0 0 2px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            max-width: 480px;
+            width: 92%;
+            max-height: 92vh;
+            overflow-y: auto;
+            z-index: 10;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: none;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            position: relative;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 5px;
+        }
+        .container::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff80ab, #ce93d8);
+            border-radius: 20px;
+        }
+        .container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+
+        /* ── TYPOGRAPHY ── */
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #e91e63, #9c27b0, #e91e63);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3em;
+            margin: 0 0 4px 0;
+            text-shadow: none;
+            animation: shimmerText 3s ease-in-out infinite;
+            letter-spacing: 1px;
+        }
+
+        @keyframes shimmerText {
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .cursive-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.6em;
+            -webkit-text-fill-color: #d14777;
+            background: none;
+            text-shadow: 0 4px 20px rgba(209, 71, 119, 0.3);
+        }
+
+        .hint {
+            color: #7c4d7a;
+            font-size: 0.95em;
+            margin: 8px 0 16px 0;
+            font-style: italic;
+            line-height: 1.6;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        /* ── INPUTS ── */
+        input[type="text"] {
+            width: 90%;
+            padding: 16px 20px;
+            border: 3px solid rgba(255, 182, 193, 0.6);
+            border-radius: 40px;
+            font-size: 1.1em;
+            font-family: 'Poppins', sans-serif;
+            color: #c2185b;
+            text-align: center;
+            outline: none;
+            transition: all 0.35s ease;
+            background: rgba(255, 250, 250, 0.85);
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.08);
+        }
+
+        input[type="text"]:focus {
+            border-color: #f06292;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.25), 0 4px 20px rgba(255, 105, 180, 0.15);
+            transform: scale(1.02);
+        }
+
+        /* ── BUTTONS ── */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button,
+        .download-btn {
+            background: linear-gradient(145deg, #f06292, #ec407a);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.05em;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 8px 28px rgba(236, 64, 122, 0.35);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after,
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            inset: -50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        button:hover::after,
+        .download-btn:hover::after {
+            opacity: 1;
+        }
+
+        button:hover,
+        .download-btn:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 14px 40px rgba(236, 64, 122, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        .secondary-btn {
+            background: linear-gradient(145deg, #b39ddb, #9575cd);
+            box-shadow: 0 8px 28px rgba(149, 117, 205, 0.35);
+        }
+        .secondary-btn:hover {
+            box-shadow: 0 14px 40px rgba(149, 117, 205, 0.5);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(6px);
+            color: #c2185b;
+            border: 2px solid #f06292;
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 28px rgba(236, 64, 122, 0.2);
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        /* ── QUIZ ── */
+        .timer {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #c2185b;
+            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            display: inline-block;
+            padding: 6px 28px;
+            border-radius: 40px;
+            border: 2px dashed rgba(240, 98, 146, 0.4);
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.08);
+        }
+
+        #question-text {
+            color: #6a1b4d;
+            font-size: 1.3em;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            white-space: pre-line;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            color: #4a2c4a;
+            border: 2px solid rgba(240, 98, 146, 0.25);
+            padding: 14px 20px;
+            border-radius: 20px;
+            font-size: 1em;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(255, 105, 180, 0.05);
+        }
+
+        .option-btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: #f06292;
+            transform: scale(1.02) translateX(4px);
+            box-shadow: 0 6px 24px rgba(255, 105, 180, 0.12);
+        }
+
+        .option-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* ── IMAGES ── */
+        .memory-img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 28px 12px 28px 12px;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 16px 40px rgba(255, 105, 180, 0.25);
+            margin: 12px 0 18px 0;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: rotate(-2deg);
+        }
+
+        .memory-img:hover {
+            transform: rotate(0deg) scale(1.04);
+        }
+
+        /* ── LETTER ── */
+        .letter-text {
+            font-size: 1.05em;
+            color: #4a2c4a;
+            line-height: 1.7;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(4px);
+            padding: 22px 24px;
+            border-radius: 20px;
+            border-left: 5px solid #f06292;
+            margin: 12px 0 18px 0;
+            box-shadow: 0 4px 20px rgba(255, 105, 180, 0.06);
+        }
+
+        /* ── SOCIALS ── */
+        .social-box {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 14px 18px;
+            border-radius: 20px;
+            margin: 8px 0;
+            color: #6a1b4d;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 16px rgba(255, 105, 180, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 24px rgba(255, 105, 180, 0.12);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ── MUSIC PLAYER ── */
+        #music-player {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(14px);
+            padding: 10px 20px 10px 26px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+            display: none;
+            align-items: center;
+            gap: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: #c2185b;
+            font-weight: 600;
+            z-index: 100;
+            font-size: 0.95em;
+        }
+
+        .music-btn {
+            background: none;
+            border: none;
+            font-size: 1.6em;
+            padding: 0 4px;
+            cursor: pointer;
+            box-shadow: none;
+            color: #c2185b;
+            transition: transform 0.2s;
+        }
+        .music-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* ── SHAKE ── */
+        .shake {
+            animation: shake 0.45s cubic-bezier(.36, .07, .19, .97) both;
+        }
+        @keyframes shake {
+            10%,
+            90% {
+                transform: translate3d(-6px, 0, 0);
+            }
+            20%,
+            80% {
+                transform: translate3d(6px, 0, 0);
+            }
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-12px, 0, 0);
+            }
+            40%,
+            60% {
+                transform: translate3d(12px, 0, 0);
+            }
+        }
+
+        /* ── POP / BOUNCE ── */
+        .pop-in {
+            animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0.6);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* ── HEART BEAT DECOR ── */
+        .heart-deco {
+            display: inline-block;
+            animation: heartBeat 1.2s ease-in-out infinite;
+            font-size: 1.8rem;
+        }
+        @keyframes heartBeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            15% {
+                transform: scale(1.25);
+            }
+            30% {
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1.15);
+            }
+            60% {
+                transform: scale(1);
+            }
+        }
+
+        /* ── GLOW RING ── */
+        .glow-ring {
+            position: absolute;
+            inset: -8px;
+            border-radius: 52px 28px 52px 28px;
+            border: 2px solid transparent;
+            background: conic-gradient(from 0deg, #f06292, #ce93d8, #f06292, #ce93d8, #f06292) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0.6;
+            animation: spinGlow 8s linear infinite;
+        }
+
+        @keyframes spinGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 480px) {
+            .container {
+                padding: 28px 16px;
+                border-radius: 36px 18px 36px 18px;
+                max-height: 94vh;
+            }
+            h1 {
+                font-size: 2.4em;
+            }
+            .cursive-title {
+                font-size: 2.8em;
+            }
+            button,
+            .download-btn {
+                padding: 12px 22px;
+                font-size: 0.95em;
+            }
+            .float-item {
+                font-size: 1.6rem;
+            }
+            #music-player {
+                bottom: 14px;
+                right: 14px;
+                padding: 8px 14px 8px 18px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── FLOATING EMOJIS ─── -->
+    <script>
+        (function spawnFloaters() {
+            const emojis = ['🌸', '✨', '💖', '🎀', '🦋', '🍡', '💌', '🌺', '🌷', '💕', '🌟', '🎵', '🎂', '🎈', '💗', '🌹'];
+            for (let i = 0; i < 22; i++) {
+                const el = document.createElement('div');
+                el.className = 'float-item';
+                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.animationDuration = (Math.random() * 6 + 5) + 's';
+                el.style.animationDelay = (Math.random() * 8) + 's';
+                el.style.fontSize = (Math.random() * 1.2 + 1.4) + 'rem';
+                document.body.appendChild(el);
+            }
+        })();
+    </script>
+
+    <!-- ─── CONFETTI ─── -->
+    <script>
+        (function spawnConfetti() {
+            const colors = ['#f06292', '#ce93d8', '#f8bbd0', '#e1bee7', '#ff80ab', '#b39ddb', '#ffab91', '#ffccbc'];
+            for (let i = 0; i < 55; i++) {
+                const el = document.createElement('div');
+                el.className = 'confetti-piece';
+                el.style.left = (Math.random() * 100) + 'vw';
+                el.style.background = colors[Math.floor(Math.random() * colors.length)];
+                el.style.width = (Math.random() * 8 + 4) + 'px';
+                el.style.height = (Math.random() * 12 + 6) + 'px';
+                el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                el.style.animationDuration = (Math.random() * 6 + 5) + 's';
+                el.style.animationDelay = (Math.random() * 10) + 's';
+                el.style.transform = `rotate(${Math.random() * 360}deg)`;
+                document.body.appendChild(el);
+            }
+        })();
+    </script>
+
+    <!-- ─── AUDIO ─── -->
+    <audio id="song1" src="song1.mp3" loop></audio>
+    <audio id="song2" src="song2.mp3" loop></audio>
+
+    <!-- ─── MUSIC PLAYER UI ─── -->
+    <div id="music-player">
+        <span>🎶</span>
+        <span id="music-label">Vibe Check</span>
+        <button class="music-btn" id="play-pause-btn" onclick="toggleMusic()">⏸️</button>
+    </div>
+
+    <!-- ─── SCREENS ─── -->
+
+    <!-- LOGIN -->
+    <div class="container pop-in" id="login-screen" style="display:block;">
+        <div class="glow-ring"></div>
+        <h1>Hey Dumbo! 🎀</h1>
+        <p class="hint">✨ Hint: The day that made all this come true..</p>
+        <input type="text" id="passwordInput" placeholder="DD/MM/YYYY" />
+        <div class="btn-group">
+            <button onclick="checkPassword()">Unlock 💌</button>
+        </div>
+        <p id="status-msg" style="color:#c2185b; margin-top:14px; font-weight:600;">You have 5 chances left! 💕</p>
+    </div>
+
+    <!-- DELETED -->
+    <div class="container" id="deleted-screen" style="background:rgba(0,0,0,0.7); backdrop-filter:blur(20px);">
+        <h1 style="color:#d32f2f; font-family:'Poppins',sans-serif; -webkit-text-fill-color:#d32f2f;">💔 ERROR</h1>
+        <p class="hint" style="color:#ff8a80;">Oops... all data deleted!</p>
+    </div>
+
+    <!-- POPUP -->
+    <div class="container pop-in" id="popup-screen">
+        <div class="glow-ring"></div>
+        <h1 id="popup-title">Happy Birthday Ayushi! 🎉</h1>
+        <p class="hint" id="popup-text">Click yes to continue further 💖</p>
+        <div class="btn-group" id="popup-buttons">
+            <button onclick="handleYes()">Yes 🌸</button>
+            <button onclick="handleNo()" class="secondary-btn">No 🙈</button>
+        </div>
+    </div>
+
+    <!-- QUIZ INTRO -->
+    <div class="container pop-in" id="quiz-intro-screen">
+        <div class="glow-ring"></div>
+        <h1>Heyyy! 🌸</h1>
+        <p class="hint" style="font-size:1.1em; color:#7c4d7a;">
+            Answer each question to see a hidden surprise!<br />
+            The last one is VERY special — good luck! 🍀✨
+        </p>
+        <button onclick="showEarphones()">Let's go! 💕</button>
+    </div>
+
+    <!-- EARPHONES -->
+    <div class="container pop-in" id="earphones-screen">
+        <div class="glow-ring"></div>
+        <h1>Wait! 🎧</h1>
+        <p class="hint" style="font-size:1.2em;">Please put your earphones on for the best experience! Trust me! 😉</p>
+        <button onclick="startQuiz()">I'm wearing them! 🎶</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="container pop-in" id="quiz-screen">
+        <div class="glow-ring"></div>
+        <div class="timer" id="timer-display">⏱️ 60s</div>
+        <h2 id="question-text" style="color:#6a1b4d;">Question</h2>
+        <div id="options-container"></div>
+        <p id="quiz-feedback" style="color:#c2185b; font-weight:600; display:none; margin-top:12px;">Oops! Try again! 🥺</p>
+    </div>
+
+    <!-- CONTINUE POPUP (after Q1) -->
+    <div class="container pop-in" id="continue-popup">
+        <div class="glow-ring"></div>
+        <h1>Yay! Correct! 🎉</h1>
+        <p class="hint">You did it! Ready for the next one?</p>
+        <button onclick="nextQuestion()">Continue further 🌸</button>
+    </div>
+
+    <!-- WAITING POPUP (after Q2) -->
+    <div class="container pop-in" id="waiting-popup">
+        <div class="glow-ring"></div>
+        <h1>Correct! ✨</h1>
+        <p class="hint" id="waiting-text">Just listen to this song for a moment... 💖</p>
+        <button onclick="nextQuestion()" id="hidden-continue-btn" style="display:none; margin-top:20px;">Continue further 🎀</button>
+    </div>
+
+    <!-- IMAGE POPUP -->
+    <div class="container pop-in" id="image-popup-screen">
+        <div class="glow-ring"></div>
+        <h1>Surprise! 📸</h1>
+        <p class="hint">A little memory unlocked just for you!</p>
+        <img id="dynamic-image" src="" alt="Memory" class="memory-img" />
+        <div class="btn-group">
+            <a id="download-link" href="" download class="download-btn">📥 Download</a>
+            <button onclick="handleImageContinue()" class="secondary-btn">Continue 🌸</button>
+        </div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="container pop-in" id="message-screen">
+        <div class="glow-ring"></div>
+        <h1 class="cursive-title">To my lifesaver...</h1>
+        <div class="letter-text">
+            Dear Ayushi,<br /><br />
+            If our lives were a Kdrama, you would definitely be the brilliant, beautiful main character who somehow manages to save my grades and my sanity every single time. 😂✨<br /><br />
+            Thank you for being the absolute best friend anyone could ask for. Your endless help with my academics means the world to me, but mostly, I'm just so lucky to have you in my life.<br /><br />
+            Wishing you a birthday as amazing, cute, and perfect as you are! Keep shining! 💖
+        </div>
+        <button onclick="showSocials()">Continue further 🎀</button>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="container pop-in" id="socials-screen">
+        <div class="glow-ring"></div>
+        <h1>Stay in touch! 💌</h1>
+        <p class="hint">Always here for you, anytime!</p>
+        <div class="social-box">📱 WhatsApp: +919232140986</div>
+        <div class="social-box">📸 Instagram: just_uncaffeinated</div>
+        <div class="social-box">📸 Instagram password: laksya ko harane wala</div>
+        <div class="social-box">👻 Discord: Venky_ykneV</div>
+        <div class="social-box">👻 Discord password: shaurya_pathak</div>
+        <div class="btn-group" style="margin-top:18px;">
+            <button onclick="showFinal()">Finish 🎬</button>
+        </div>
+    </div>
+
+    <!-- FINAL -->
+    <div class="container pop-in" id="final-screen">
+        <div class="glow-ring"></div>
+        <h1 class="cursive-title" style="font-size:4em;">Thank You!</h1>
+        <h2 style="color:#6a1b4d; font-family:'Poppins',sans-serif; font-weight:600;">
+            And a very Happy Birthday Ayushi! 🎂🌸✨
+        </h2>
+        <p class="hint" style="font-size:1.1em;">I hope you loved this little surprise. Enjoy your special day!</p>
+        <div style="margin-top:16px; font-size:2.5rem; animation:heartBeat 1.2s ease-in-out infinite;">💖</div>
+    </div>
+
+    <!-- ─── JAVASCRIPT ─── -->
+    <script>
+        // ── HELPERS ──
+        function hideAll() {
+            document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+        }
+
+        // ── LOGIN ──
+        let attempts = 5;
+        const correctDate = "31/12/2025";
+
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value.trim();
+            if (input === correctDate) {
+                hideAll();
+                document.getElementById('popup-screen').style.display = 'block';
+                document.getElementById('popup-screen').classList.add('pop-in');
+            } else {
+                attempts--;
+                const ls = document.getElementById('login-screen');
+                ls.classList.remove('shake');
+                void ls.offsetWidth;
+                ls.classList.add('shake');
+                if (attempts > 0) {
+                    document.getElementById('status-msg').innerText =
+                        `Oopsie! Wrong date. You have ${attempts} chance(s) left! 🥺`;
+                } else {
+                    hideAll();
+                    document.getElementById('deleted-screen').style.display = 'block';
+                }
+            }
+        }
+
+        // ── POPUP DIALOG ──
+        let yesCount = 0;
+
+        function handleYes() {
+            if (yesCount === 0) {
+                document.getElementById('popup-title').innerText = "Are you sure? 🤔";
+                document.getElementById('popup-text').innerText = "There is no turning back now...";
+                yesCount++;
+            } else {
+                hideAll();
+                document.getElementById('quiz-intro-screen').style.display = 'block';
+                document.getElementById('quiz-intro-screen').classList.add('pop-in');
+            }
+        }
+
+        function handleNo() {
+            document.getElementById('popup-title').innerText = "Whatever! 💅";
+            document.getElementById('popup-text').innerText = "I don't care, see what I have made anyway!";
+            document.getElementById('popup-buttons').style.display = 'none';
+            setTimeout(() => {
+                hideAll();
+                document.getElementById('quiz-intro-screen').style.display = 'block';
+                document.getElementById('quiz-intro-screen').classList.add('pop-in');
+            }, 2500);
+        }
+
+        function showEarphones() {
+            hideAll();
+            document.getElementById('earphones-screen').style.display = 'block';
+            document.getElementById('earphones-screen').classList.add('pop-in');
+        }
+
+        // ── AUDIO ENGINE ──
+        const song1 = document.getElementById('song1');
+        const song2 = document.getElementById('song2');
+        let currentAudio = null;
+        let song1PausedAt = 0;
+        let isSong1Playing = false;
+
+        function playSong1() {
+            if (currentAudio && currentAudio !== song1) {
+                currentAudio.pause();
+            }
+            song1.currentTime = song1PausedAt;
+            song1.play().catch(() => {});
+            currentAudio = song1;
+            isSong1Playing = true;
+            document.getElementById('music-player').style.display = 'flex';
+            document.getElementById('play-pause-btn').textContent = '⏸️';
+            document.getElementById('music-label').textContent = '🎵 Song 1';
+        }
+
+        function pauseSong1() {
+            if (song1) {
+                song1PausedAt = song1.currentTime;
+                song1.pause();
+                isSong1Playing = false;
+                if (currentAudio === song1) currentAudio = null;
+            }
+        }
+
+        function playSong2() {
+            if (currentAudio && currentAudio !== song2) {
+                currentAudio.pause();
+            }
+            song2.currentTime = 0;
+            song2.play().catch(() => {});
+            currentAudio = song2;
+            document.getElementById('music-player').style.display = 'flex';
+            document.getElementById('play-pause-btn').textContent = '⏸️';
+            document.getElementById('music-label').textContent = '🎵 Song 2';
+        }
+
+        function stopSong2() {
+            song2.pause();
+            song2.currentTime = 0;
+            if (currentAudio === song2) currentAudio = null;
+        }
+
+        function toggleMusic() {
+            if (!currentAudio) return;
+            if (currentAudio.paused) {
+                currentAudio.play().catch(() => {});
+                document.getElementById('play-pause-btn').textContent = '⏸️';
+            } else {
+                currentAudio.pause();
+                document.getElementById('play-pause-btn').textContent = '▶️';
+            }
+        }
+
+        // song2 loop: show continue button after first loop ends
+        let song2ContinueShown = false;
+
+        song2.addEventListener('ended', function() {
+            if (!song2ContinueShown) {
+                song2ContinueShown = true;
+                document.getElementById('hidden-continue-btn').style.display = 'inline-block';
+                document.getElementById('waiting-text').innerHTML =
+                    'Okay, you can proceed now! 💖 <span style="display:inline-block;animation:heartBeat 1.2s ease-in-out infinite;">💗</span>';
+            }
+        });
+
+        // ── QUIZ ──
+        const questions = [{
+            subject: "Biology 🧬",
+            text: "What is known as the powerhouse of the cell?",
+            options: ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"],
+            answer: 1
+        }, {
+            subject: "Chemistry 🧪",
+            text: "What is the chemical formula for water?",
+            options: ["H2O", "CO2", "NaCl", "O2"],
+            answer: 0
+        }, {
+            subject: "Physics 🔭",
+            text: "What invisible force keeps us grounded on Earth?",
+            options: ["Magnetism", "Friction", "Gravity", "Magic"],
+            answer: 2
+        }, {
+            subject: "Mathematics 📐",
+            text: "What is the value of Pi to two decimal places?",
+            options: ["3.12", "3.16", "3.14", "3.18"],
+            answer: 2
+        }, {
+            subject: "The Ultimate Question 👑",
+            text: "Who is the smartest, most amazing bestie ever?",
+            options: ["Batman", "Gojo Satoru", "Iron Man", "Ayushi ✨"],
+            answer: 3
+        }];
+
+        let currentQuestionIndex = 0;
+        let timerInterval = null;
+        let timeLeft = 60;
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            song2ContinueShown = false;
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            hideAll();
+            const q = questions[currentQuestionIndex];
+            document.getElementById('question-text').textContent = `${q.subject}\n${q.text}`;
+            document.getElementById('quiz-feedback').style.display = 'none';
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = opt;
+                btn.onclick = () => checkAnswer(idx);
+                container.appendChild(btn);
+            });
+
+            document.getElementById('quiz-screen').style.display = 'block';
+            document.getElementById('quiz-screen').classList.add('pop-in');
+
+            timeLeft = 60;
+            document.getElementById('timer-display').textContent = `⏱️ ${timeLeft}s`;
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer-display').textContent = `⏱️ ${timeLeft}s`;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('quiz-feedback').textContent = "Time's up! Try again bestie! ⏰";
+                    document.getElementById('quiz-feedback').style.display = 'block';
+                    setTimeout(loadQuestion, 2000);
+                }
+            }, 1000);
+        }
+
+        function checkAnswer(selectedIndex) {
+            if (selectedIndex === questions[currentQuestionIndex].answer) {
+                clearInterval(timerInterval);
+                handleCorrectAnswer();
+            } else {
+                document.getElementById('quiz-feedback').style.display = 'block';
+                const qs = document.getElementById('quiz-screen');
+                qs.classList.remove('shake');
+                void qs.offsetWidth;
+                qs.classList.add('shake');
+            }
+        }
+
+        function handleCorrectAnswer() {
+            hideAll();
+
+            if (currentQuestionIndex === 0) {
+                // Q1 → play song1
+                song1PausedAt = 0;
+                playSong1();
+                document.getElementById('continue-popup').style.display = 'block';
+                document.getElementById('continue-popup').classList.add('pop-in');
+
+            } else if (currentQuestionIndex === 1) {
+                // Q2 → pause song1, play song2
+                pauseSong1();
+                song2ContinueShown = false;
+                document.getElementById('hidden-continue-btn').style.display = 'none';
+                document.getElementById('waiting-text').innerHTML =
+                    'Just listen to this song for a moment... 💖 <span class="heart-deco">💗</span>';
+                playSong2();
+                document.getElementById('waiting-popup').style.display = 'block';
+                document.getElementById('waiting-popup').classList.add('pop-in');
+
+            } else if (currentQuestionIndex === 2) {
+                showImagePopup('your-image-1.jpg');
+            } else if (currentQuestionIndex === 3) {
+                showImagePopup('your-image-2.jpg');
+            } else if (currentQuestionIndex === 4) {
+                showImagePopup('your-image-3.jpg');
+            }
+        }
+
+        function showImagePopup(imgSrc) {
+            hideAll();
+            document.getElementById('dynamic-image').src = imgSrc;
+            document.getElementById('download-link').href = imgSrc;
+            document.getElementById('image-popup-screen').style.display = 'block';
+            document.getElementById('image-popup-screen').classList.add('pop-in');
+        }
+
+        function handleImageContinue() {
+            if (currentQuestionIndex < 4) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                hideAll();
+                document.getElementById('message-screen').style.display = 'block';
+                document.getElementById('message-screen').classList.add('pop-in');
+            }
+        }
+
+        function nextQuestion() {
+            // If we're coming from Q2 (waiting popup), resume song1
+            if (currentQuestionIndex === 1) {
+                stopSong2();
+                // song1 will resume from song1PausedAt
+                playSong1();
+            }
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+
+        // ── NAVIGATION ──
+        function showSocials() {
+            hideAll();
+            document.getElementById('socials-screen').style.display = 'block';
+            document.getElementById('socials-screen').classList.add('pop-in');
+        }
+
+        function showFinal() {
+            hideAll();
+            document.getElementById('final-screen').style.display = 'block';
+            document.getElementById('final-screen').classList.add('pop-in');
+            // keep music playing 🎵
+        }
+
+        // ── KEYBOARD ENTER for login ──
+        document.getElementById('passwordInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') checkPassword();
+        });
+
+        console.log('🌸 Happy Birthday Ayushi! 🎀');
+    </script>
+
+</body>
+</html>
